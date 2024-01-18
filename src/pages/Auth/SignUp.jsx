@@ -38,7 +38,7 @@ const SignUp = () => {
     }
   };
 
-  const { signUpSuccess, signUpError, signUpErrorMessage } = useSelector(
+  const { signUpSuccess, signUpError, signUpErrorMessage, signUpFetching } = useSelector(
     (state) => state.signUpSlice
   );
 
@@ -120,7 +120,7 @@ const SignUp = () => {
                 className="text-primary cursor-pointer font-bold underline"
                 onClick={() => navigate("/signin")}
               >
-                SignIn
+                {signUpFetching ? "Loading..." : "Sign Up"}
               </span>
             </p>
           </div>

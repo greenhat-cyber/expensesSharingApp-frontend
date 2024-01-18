@@ -34,7 +34,7 @@ const SignIn = () => {
     }
   };
 
-  const { signInSuccess, signInError, signInErrorMessage } = useSelector(
+  const { signInSuccess, signInError, signInErrorMessage, signInFetching } = useSelector(
     (state) => state.signInSlice
   );
 
@@ -99,7 +99,7 @@ const SignIn = () => {
               className="bg-primary w-full h-[2.5rem] rounded-md text-white active:bg-violet-800"
               onClick={handleSubmit}
             >
-              Sign In
+              {signInFetching ? "Loading..." : "Sign In"}
             </button>
             <p className="text-[10px] max-lg:text-[15px] mt-3">
               Don't have an account ?{" "}

@@ -112,7 +112,7 @@ const SignUp = () => {
               className="bg-primary w-full h-[2.5rem] rounded-md text-white active:bg-violet-800"
               onClick={handleSubmit}
             >
-              Sign Up
+              {signUpFetching ? "Loading..." : "Sign Up"}
             </button>
             <p className="text-[10px] max-lg:text-[15px] mt-3">
               Don't have an account ?{" "}
@@ -120,7 +120,7 @@ const SignUp = () => {
                 className="text-primary cursor-pointer font-bold underline"
                 onClick={() => navigate("/signin")}
               >
-                {signUpFetching ? "Loading..." : "Sign Up"}
+                Sign In
               </span>
             </p>
           </div>

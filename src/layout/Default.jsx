@@ -11,6 +11,8 @@ const Default = () => {
   useEffect(() => {
     if (!auth) {
       navigate("/signin")  
+    }else{
+      navigate("/dashboard")  
     }
   }, [])
 

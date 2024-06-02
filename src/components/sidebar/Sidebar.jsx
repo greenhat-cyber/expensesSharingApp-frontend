@@ -8,13 +8,13 @@ const Sidebar = () => {
         {
             name: "Home",
             path: "/dashboard",
-            icon: <AiFillHome />,
+            icon: <AiFillHome size={20} />,
         },
         {
             name: "Groups",
             path: "/groups",
             subPath: "/groups/groupsdetails",
-            icon: <MdGroups />,
+            icon: <MdGroups size={20} />,
         },
     ];
     const location = useLocation()
@@ -29,7 +29,7 @@ const Sidebar = () => {
             <div className="w-full px-4 mt-4">
                 {sideBarData.map((items, idx) => {
                     return (
-                        <div key={idx} onClick={() => navigate(items.path)} className={`transition-all ease-in-out duration-[.3s] w-full h-[3rem] flex items-center justify-center gap-2 rounded-md font-semibold cursor-pointer mb-2 ${location.pathname === items.path || (items.subPath && location.pathname === items.subPath) ? "bg-primary text-white" : "text-gray-700 hover:bg-slate-100"}`}>
+                        <div key={idx} onClick={() => navigate(items.path)} className={`transition-all ease-in-out duration-[.3s] w-full h-[3rem] flex items-center justify-start px-4 gap-2 rounded-md font-semibold cursor-pointer mb-2 ${location.pathname === items.path || (items.subPath && location.pathname === items.subPath) ? "bg-primary text-white" : "text-gray-700 hover:bg-slate-100"}`}>
                             {items.icon}
                             <p>{items.name}</p>
                         </div>

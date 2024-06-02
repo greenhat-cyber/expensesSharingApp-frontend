@@ -30,7 +30,6 @@ const actionHandler = (payload) => {
   
   axios.interceptors.response.use(undefined, function (err) {
     var statusCode = err.status;
-  
     return new Promise(() => {
       if (statusCode == 401) {
         // Got an unauthorized, logout the User

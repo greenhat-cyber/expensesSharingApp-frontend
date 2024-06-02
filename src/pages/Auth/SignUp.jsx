@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -24,7 +24,6 @@ const SignUp = () => {
       error = "Please enter Email";
     } else if (name === "") {
       error = "Please enter a username";
-    } else if (password === "") {
     } else if (!emailRegex.test(email)) {
       error = "Please enter a valid email address";
     } else if (password === "") {

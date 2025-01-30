@@ -10,13 +10,13 @@ import GroupDetails from "../pages/Groups/GroupDetails";
 const IndexRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Default />}>
+      {/* <Route path="/" element={<Default />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/groups" element={<Groups />} />
         <Route path="/groups/groupsdetails" element={<GroupDetails />} />
-      </Route>
+      </Route> */}
       <Route path="/signin" element={<SignIn />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/" element={<SignUp />} />
     </Routes>
   );
 };

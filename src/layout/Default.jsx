@@ -8,13 +8,13 @@ const Default = () => {
 
   const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   if (!auth) {
-  //     navigate("/signin")  
-  //   }else{
-  //     navigate("/dashboard")  
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (!auth) {
+      navigate("/signup")  
+    }else{
+      navigate("/dashboard")  
+    }
+  }, [])
 
   return (
     <div className="flex">

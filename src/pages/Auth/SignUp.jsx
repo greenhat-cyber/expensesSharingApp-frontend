@@ -59,14 +59,14 @@ const SignUp = () => {
       dispatch(clearsignUpState());
     }
 
-    if (signUpSuccess) {
-        dispatch(clearsignUpState());
-        toast.success("Account Created")
-        navigate("/dashboard");
-    }
-    if (auth) {
-      navigate("/dashboard");
-    }
+    // if (signUpSuccess) {
+    //     dispatch(clearsignUpState());
+    //     toast.success("Account Created")
+    //     navigate("/dashboard");
+    // }
+    // if (auth) {
+    //   navigate("/dashboard");
+    // }
   }, [signUpError, signUpSuccess]);
   return (
     <div className="w-full h-screen flex items-center justify-center max-lg:px-2">

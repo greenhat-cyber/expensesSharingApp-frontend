@@ -1,4 +1,3 @@
-import React from 'react'
 import GroupCard from '../../components/groupCard/GroupCard'
 
 const Dashboard = () => {
@@ -10,10 +9,11 @@ const Dashboard = () => {
         </div>
 
         <div className='grid grid-cols-4 max-lg:grid-cols-1 gap-3'>
+            {/* <GroupCard/>
             <GroupCard/>
             <GroupCard/>
-            <GroupCard/>
-            <GroupCard/>
+            <GroupCard/> */}
+            <input className='checked:bg-red-600' type='checkbox'/>
         </div>
     </div>
   )

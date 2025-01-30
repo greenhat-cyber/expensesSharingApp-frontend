@@ -9,7 +9,7 @@ export const signUpUser = createAsyncThunk(
         url: api.signUpURL,
         method: "POST",
         data: {
-          name,
+          fullName:name,
           email,
           password,
         },

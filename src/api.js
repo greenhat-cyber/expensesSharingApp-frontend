@@ -9,9 +9,16 @@ const actionHandler = (payload) => {
     }
   
     return new Promise((resolve, reject) => {
-      payload.baseURL = "https://tuberlink-backend.onrender.com/";
+      // payload.baseURL = "https://tuberlink-backend.onrender.com/";
   
-      axios(payload)
+      axios({
+        ...payload,
+        baseURL: "https://tuberlink-backend.onrender.com/",
+        withCredentials: true, // Ensure this line is added to send/receive cookies
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
         .then((response) => {
           if (response.status >= 200 && response.status < 300) {
             resolve(response);
